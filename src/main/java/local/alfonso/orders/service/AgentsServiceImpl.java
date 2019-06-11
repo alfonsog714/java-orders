@@ -120,6 +120,6 @@ public class AgentsServiceImpl implements AgentsService
                 currentAgent.getCustomers().add(new Customers(c.getCustname(),c.getCustcity(),c.getWorkingarea(),c.getCustcountry(),c.getGrade(),c.getOpeningamt(),c.getReceiveamt(),c.getPaymentamt(),c.getOutstandingamt(),c.getPhone(), c.getAgent()));
             }
         }
-        return null;
+        return arepos.save(currentAgent);
     }
 }
