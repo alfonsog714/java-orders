@@ -1,7 +1,6 @@
 package local.alfonso.orders.service;
 
 
-import local.alfonso.orders.model.Customers;
 import local.alfonso.orders.model.Orders;
 import local.alfonso.orders.repos.OrdersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +9,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.ArrayList;
-import java.util.Optional;
 
 @Service(value = "ordersService")
 public class OrdersServiceImpl implements OrdersService {
