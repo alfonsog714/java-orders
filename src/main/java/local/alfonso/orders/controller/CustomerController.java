@@ -53,7 +53,7 @@ public class CustomerController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @DeleteMapping(value = "/update/{custcode}", consumes = {"application/json"})
+    @DeleteMapping(value = "/delete/{custcode}", consumes = {"application/json"})
     public ResponseEntity<?> deleteCustomerById(@PathVariable long custcode)
     {
         customersService.delete(custcode);
