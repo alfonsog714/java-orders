@@ -45,4 +45,11 @@ public class CustomerController {
 
         return new ResponseEntity<>(null, responseHeaders, HttpStatus.CREATED);
     }
+
+    @PutMapping(value = "/update/{custcode}")
+    public ResponseEntity<?> updateCustomerById(@RequestBody Customers updateCustomer, @PathVariable long custcode)
+    {
+        customersService.update(updateCustomer, custcode);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 }
